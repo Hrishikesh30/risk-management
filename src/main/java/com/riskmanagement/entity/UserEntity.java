@@ -19,6 +19,10 @@ public class UserEntity {
     @Column(name = "user_id")
     private Long userId;
 
+    @ManyToOne
+    @JoinColumn(name = "company_id")
+    private CompanyEntity company;
+
     @Column(nullable = false, unique = true)
     private String username;
 

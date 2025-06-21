@@ -22,12 +22,14 @@ public class ApplicationEntity {
     @Column(name = "application_id")
     private Long applicationId;
 
-    @Column(name="company_id")
-    private Long companyId;
+    @ManyToOne
+    @JoinColumn(name = "company_id", referencedColumnName = "company_id", nullable = false)
+    private CompanyEntity company;
+
 
     // Applicant Details
     @ManyToOne
-    @JoinColumn(name="userId", referencedColumnName = "userId",nullable = false)
+    @JoinColumn(name="user_id", referencedColumnName = "user_id",nullable = false)
     private UserEntity user;
 
     // Financial Inputs (updated)
