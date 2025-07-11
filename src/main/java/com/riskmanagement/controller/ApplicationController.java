@@ -46,4 +46,11 @@ public class ApplicationController {
         responseDTO.setSubmittedAt(savedApplication.getSubmittedAt());
         return ResponseEntity.ok(responseDTO);
     }
+
+//    @GetMapping("/my")
+//    public ResponseEntity<List<ApplicationEntity>> getUserApps(Authentication authentication) {
+//        String username = authentication.getName();
+//        List<ApplicationEntity> apps = applicationService.getApplicationsByUsername(username);
+//        return ResponseEntity.ok(apps);
+//    }
 }
